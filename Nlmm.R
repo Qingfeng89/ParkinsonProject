@@ -18,7 +18,7 @@ unitemp <- unique(temp_index)
 for (id in unitemp){
   pos <- which(PPMI_onmed[which(PPMI_onmed$PATNO==id),]$PDMEDYN == 1)
   if(!(any(pos %in% c(1,2,3,4,5,6))))
-    temp_index <- temp_index[-which(temp_index == id)]
+	temp_index <- temp_index[-which(temp_index == id)]
 }
 PPMI_offmed <- PPMI[which(!(PPMI$PATNO %in% temp_index)),]
 #PPMI_offtest <- PPMI_offmed[order(PPMI_offmed$PATNO),]
